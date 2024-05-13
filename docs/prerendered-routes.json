@@ -1,0 +1,13 @@
+{
+  "routes": [
+    "/about",
+    "/contacts",
+    "/gallery",
+    "/home",
+    "/login",
+    "/logout",
+    "/movies",
+    "/register",
+    "/tv"
+  ]
+}

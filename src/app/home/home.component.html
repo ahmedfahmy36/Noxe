@@ -1,0 +1,55 @@
+
+<app-header [headerTrendingMovie]="trendingMovies"></app-header>
+
+<div class="container">
+<div class="row py-4">
+<div class="col-md-4 py-4">
+ <div class="brdr w-25 my-3"></div>
+<h2 class="my-3">TrendingMovies<br/>to watch right now</h2>
+<p class="">Trending Movies to watch right now</p>
+<div class="brdr w-100 my-3"></div>
+</div>
+
+    <div *ngFor="let movie of trendingMovies" class="col-md-2">
+       <div class="movie position-relative">
+       <a [routerLink]="['/moviedetails' , movie.id]">
+        <img [src]=" imgPrefix + movie.poster_path" class="w-100" alt="">
+        <h3 class="h6 mt-2 fw-bolder">{{movie.title}} </h3>
+        <div class="vote p-2 fw-bolder position-absolute top-0 end-0  bg-lights">{{movie.vote_average}}</div>
+             </a>
+        </div>
+    </div>
+</div>
+<div class="row py-4">
+<div class="col-md-4 py-4">
+ <div class="brdr w-25 my-3"></div>
+<h2 class="my-3">TrendingTv<br/>to watch right now</h2>
+<p class="">Trending Tv to watch right now</p>
+<div class="brdr w-100 my-3"></div>
+</div>
+
+    <div *ngFor="let tv of trendingTv" class="col-md-2">
+       <div class="movie position-relative">
+        <img [src]=" imgPrefix + tv.poster_path" class="w-100" alt="">
+        <h3 class="h6 mt-2 fw-bolder">{{tv.name}} </h3>
+        <div class="vote p-2 fw-bolder position-absolute top-0 end-0  bg-lights">{{tv.vote_average}}</div>
+        </div>
+    </div>
+</div>
+<div class="row py-4">
+    <div class="col-md-4 py-4">
+     <div class="brdr w-25 my-3"></div>
+    <h2 class="my-3">TrendingPeople<br/>to watch right now</h2>
+    <p class="">Trending People to watch right now</p>
+    <div class="brdr w-100 my-3"></div>
+    </div>
+    
+        <div *ngFor="let person of trendingPeople" class="col-md-2">
+           <div class="movie position-relative">
+            <img [src]=" imgPrefix + person.profile_path" class="w-100" alt="">
+            <h3 class="h6 mt-2 fw-bolder">{{person.name}} </h3>
+           
+            </div>
+        </div>
+    </div>
+</div>
